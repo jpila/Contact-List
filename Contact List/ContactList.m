@@ -7,7 +7,16 @@
 //
 
 #import "ContactList.h"
-
+#import "Contact.h"
 @implementation ContactList
 
+-(void)addContact:(Contact *)newContact{
+ 
+}
+
+-(instancetype)init{
+    self = [super init];
+    NSMutableArray *contactList;
+    return self;
+}
 @end

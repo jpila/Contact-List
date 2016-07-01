@@ -13,7 +13,6 @@
 
 
 +(NSString *)inputForPrompt:(NSString *)promptString{
-    printf("What would you like to next?\nNew-Create new contact list. \nList-List All Contacts.\nQuit-Exit Application");
     char str[250];
     fgets(str,250,stdin);
     NSString *userinput = [[NSString alloc]initWithUTF8String:str];
