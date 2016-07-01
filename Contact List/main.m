@@ -7,11 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "inputCollector.h"
+#import "Contact.h"
 int main(int argc, const char * argv[]) {
-    @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+    inputCollector *new =[[inputCollector alloc]init];
+    int loopstarter = 1;
+    while (loopstarter == 1){
+    
+    NSString *usernameInput = [inputCollector inputForPrompt:@"Enter your username"];
+    
+    
+    NSLog(@"User has selected %@", usernameInput);
+        NSString *lowercaseUser = [usernameInput lowercaseString];
+        if ([lowercaseUser isEqualToString:@"quit\n"]){
+            printf("Thank you for using Contact List");
+            loopstarter = 2;
+        }
     }
-    return 0;
+        return 0;
 }
