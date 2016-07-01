@@ -11,12 +11,23 @@
 @implementation ContactList
 
 -(void)addContact:(Contact *)newContact{
- 
+    [self.contactList addObject:newContact];
 }
+
+
+-(void)displayContacts{
+    for (Contact *contact in self.contactList) {
+        NSLog(@"%@ %@ %@", contact.firstName, contact.lastName, contact.eMail);
+    }
+}
+
+
 
 -(instancetype)init{
     self = [super init];
-    NSMutableArray *contactList;
+    if (self) {
+        _contactList = [[NSMutableArray alloc]init];
+    }
     return self;
 }
 @end

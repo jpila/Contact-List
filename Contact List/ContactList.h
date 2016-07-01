@@ -11,7 +11,9 @@
 @interface ContactList : NSObject
 
 @property NSMutableArray *contactList;
--(instancetype)init;
+
+
+-(void)displayContacts;
 -(void)addContact:(Contact *)newContact;
 
 @end

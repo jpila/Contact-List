@@ -13,11 +13,11 @@
 
 
 +(NSString *)inputForPrompt:(NSString *)promptString{
+    NSLog(@"%@", promptString);
     char str[250];
     fgets(str,250,stdin);
-    NSString *userinput = [[NSString alloc]initWithUTF8String:str];
-    promptString=userinput;
-    return promptString;
+    NSString *userinput = [[[NSString alloc]initWithUTF8String:str]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    return userinput;
 }
 @end
 
